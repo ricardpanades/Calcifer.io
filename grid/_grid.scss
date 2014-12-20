@@ -18,7 +18,7 @@
 
 
 
-
+// simple settings
 body {
 	box-sizing: border-box;
 	margin: 0;
@@ -43,17 +43,18 @@ body {
 
 	.row {
 		@include clearfix;
-		margin-left: -$column-padding + px;
-		margin-right: -$column-padding + px;
+		margin-left: -$column-gutter + px;
+		margin-right: -$column-gutter + px;
 
 		// eliminar
 		margin-bottom: 10px;
 	}
 
+	// generate the columns
 	@for $i from 1 through $n-columns {
 	     .#{$colname}-#{$i} {
 		width: (((($max-width/$n-columns)*$i)*100)/$max-width) *1%;
-		padding: $column-padding + px;
+		padding: $column-gutter + px;
 		float: left;
 	     }
 
@@ -76,4 +77,57 @@ body {
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+
+
+
+
+// 
+// Responsive
+// 
+
+// Tablet large
+@media (max-width: $tablet-large) {
+
+}
+
+@mixin tablet-large() {
+	@media (max-width: $tablet-large) {
+		@content;
+	}
+}
+
+// Tablet small
+@media (max-width: $tablet-small) {
+
+}
+
+@mixin tablet-small() {
+	@media (max-width: $tablet-small) {
+		@content;
+	}
+}
+
+
+// Mobile large
+@media (max-width: $mobile-large) {
+
+}
+
+@mixin mobile-large() {
+	@media (max-width: $mobile-large) {
+		@content;
+	}
+}
+
+// Mobile small
+@media (max-width: $mobile-small) {
+
+}
+
+@mixin mobile-small() {
+	@media (max-width: $mobile-small) {
+		@content;
+	}
 }

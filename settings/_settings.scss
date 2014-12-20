@@ -5,4 +5,19 @@ $n-columns: 12;
 // Set the max width of your grid.
 $max-width: 1300;
 
-$column-padding: 10;
+// Set the column gutter
+$column-gutter: 10;
+
+
+
+
+
+// 
+// Responsive
+// 
+
+$tablet-large: 800;
+$tablet-small: 500;
+
+$mobile-large: 400;
+$mobile-small: 300;
