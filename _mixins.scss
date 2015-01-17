@@ -1,0 +1,25 @@
+// -------------------------------------- //
+// MIXINS
+// -------------------------------------- //
+
+// Some useful mixins.
+
+
+
+
+
+// CLEAR FLOATS
+@mixin clearfix {
+	*zoom: 1;
+	clear: both;
+
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+}
