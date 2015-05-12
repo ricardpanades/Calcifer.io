@@ -1,18 +1,24 @@
+html {
+	height: 100%;
+}
+
 body {
 	font-family: Georgia, serif;
 	background: #BC84A6;
 	color: #fff;
 	text-align: center;
+	line-height: 1.5;
+	height: 100%;
 }
 
 h1 {
 	font-size: 3em;
 	font-family: Helvetica, sans-serif;
-	margin: 1em 0;
+	margin: .8em 0;
 }
 
 h3 {
-	font-size: 1.8em;
+	font-size: 1.5em;
 	margin: 1em 0;
 }
 
