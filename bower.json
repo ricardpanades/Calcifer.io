@@ -1,0 +1,31 @@
+{
+  "name": "Calcifer",
+  "description": "A simple and beautiful grid powered by SASS (SCSS), like my cat (except for the SASS, my cat don't know what the hell is this).",
+  "version": "0.1",
+  "main": "_calcifer.scss",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "**/*.txt"
+  ],
+  "keywords": [
+    "Calcifer",
+    "columns",
+    "grid",
+    "responsive",
+    "layout",
+    "media",
+    "media-queries",
+    "queries",
+    "sass",
+    "scss",
+    "cat"
+  ],
+  "authors": [
+    "ricardpanades (http://ricardpanades.com)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ricardpanades/Calcifer.git"
+  }
+}
