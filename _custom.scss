@@ -1,21 +1,25 @@
 body {
 	font-family: Georgia, serif;
 	background: #BC84A6;
+	color: #fff;
+	text-align: center;
 }
 
 h1 {
-	font-size: 2.4em;
+	font-size: 3em;
 	font-family: Helvetica, sans-serif;
-	margin: 1em;
+	margin: 1em 0;
 }
 
-p {
-	font-size: 1.4em;
-	margin: 1em;
+h3 {
+	font-size: 1.8em;
+	margin: 1em 0;
 }
 
 .center-all {
 	display: table;
+	height: 100%;
+	width: 100%;
 
 	.center-all__content {
 		display: table-cell;
