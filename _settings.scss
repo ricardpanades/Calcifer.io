@@ -1,23 +1,47 @@
 
-// Set how many columns you want.
+// -------------------------------------------------------------------//
+// BASIC SETTINGS
+// -------------------------------------------------------------------//
+// *
+// The basic settings of the grid
+//
+// [1] - If you want to enable 'box-sizing: border-box' dont change this, if not, set it to false.
+// [2] - Set how many columns you want.
+// [1] - Set the max width of your grid.
+// [1] - Set the column gutter.
+// *
+
+// [1] - Box sizing
+$border-box: true;
+
+// [2] - Number of columns
 $n-columns: 12;
 
-// Set the max width of your grid.
+// [3] - Max width of the grid.
 $max-width: 1300;
 
-// Set the column gutter
+// [4] - Column gutter.
 $column-gutter: 10;
 
 
 
 
 
-// ------------
-// Responsive settings
-// ------------
+// -------------------------------------------------------------------//
+// RESPONSIVE SETTINGS
+// -------------------------------------------------------------------//
+// *
+// Here you can set some custom breakpoints
+// *
 
+// Tablet large
 $tablet-large: 800;
+
+// Table small
 $tablet-small: 500;
 
+// Mobile large
 $mobile-large: 400;
+
+// Mobile small
 $mobile-small: 300;
