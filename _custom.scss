@@ -9,6 +9,7 @@ body {
 	text-align: center;
 	line-height: 1.5;
 	height: 100%;
+	text-rendering: optimizeLegibility;
 }
 
 h1 {
@@ -18,7 +19,7 @@ h1 {
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin: 1em 0;
 }
 
@@ -26,6 +27,9 @@ h3 {
 	display: table;
 	height: 100%;
 	width: 100%;
+	padding: 4em 0;
+	max-width: 60em;
+
 
 	.center-all__content {
 		display: table-cell;
