@@ -1,0 +1,89 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: inherit; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1300px;
+  width: 100%; }
+
+.row {
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: row wrap; }
+
+.calcol-1 {
+  float: left;
+  padding: 10px;
+  width: 8.3333333333%; }
+
+.calcol-2 {
+  float: left;
+  padding: 10px;
+  width: 16.6666666667%; }
+
+.calcol-3 {
+  float: left;
+  padding: 10px;
+  width: 25%; }
+
+.calcol-4 {
+  float: left;
+  padding: 10px;
+  width: 33.3333333333%; }
+
+.calcol-5 {
+  float: left;
+  padding: 10px;
+  width: 41.6666666667%; }
+
+.calcol-6 {
+  float: left;
+  padding: 10px;
+  width: 50%; }
+
+.calcol-7 {
+  float: left;
+  padding: 10px;
+  width: 58.3333333333%; }
+
+.calcol-8 {
+  float: left;
+  padding: 10px;
+  width: 66.6666666667%; }
+
+.calcol-9 {
+  float: left;
+  padding: 10px;
+  width: 75%; }
+
+.calcol-10 {
+  float: left;
+  padding: 10px;
+  width: 83.3333333333%; }
+
+.calcol-11 {
+  float: left;
+  padding: 10px;
+  width: 91.6666666667%; }
+
+.calcol-12 {
+  float: left;
+  padding: 10px;
+  width: 100%; }
+
+[class*="calcol-"] {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.content {
+  background: #eee;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center; }
