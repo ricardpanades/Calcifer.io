@@ -2,7 +2,7 @@
   "name": "Calcifer",
   "description": "A simple and beautiful grid powered by SASS (SCSS), like my cat (except for the SASS, my cat don't know what the hell is this).",
   "version": "0.1",
-  "main": "_calcifer.scss",
+  "main": "app/_calcifer.scss",
   "license": "MIT",
   "ignore": [
     "**/.*",
