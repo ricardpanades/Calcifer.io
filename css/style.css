@@ -78,3 +78,22 @@ body {
   width: 100%;
   padding: 10px;
   float: left; }
+
+body {
+  font-family: Georgia, serif;
+  background: #BC84A6; }
+
+h1 {
+  font-size: 2.4em;
+  font-family: Helvetica, sans-serif;
+  margin: 1em; }
+
+p {
+  font-size: 1.4em;
+  margin: 1em; }
+
+.center-all {
+  display: table; }
+  .center-all .center-all__content {
+    display: table-cell;
+    vertical-align: middle; }
