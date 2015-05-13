@@ -1,38 +1,166 @@
+// This code is provisional
+
+// COLOR VARIABLES ----------
+$red: #d61800;
+$yellow: #ffc519;
+$green: #4ab25a;
+$blue: #2890eb;
+$purple: #CC50C3;
+
+$darkgray: #333;
+$font-color: #777;
+
+
+
 html {
 	height: 100%;
 }
 
 body {
-	font-family: Georgia, serif;
-	background: #bc84a6;
-	color: #fff;
-	text-align: center;
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: $font-color;
 	line-height: 1.5;
 	height: 100%;
 	text-rendering: optimizeLegibility;
 }
 
-h1 {
-	font-size: 3em;
-	font-family: Helvetica, sans-serif;
-	margin: .8em 0 0;
+a,
+a:visited {
+	color: $blue;
+
+	&:hover { color: lighten($blue, 5%); }
 }
 
-h3 {
-	font-size: 1.2em;
-	margin: 1em 0 0;
-}
+.hero-header {
+	color: #fff;
+	padding: 10em 0;
+	text-align: center;
+	background: $darkgray;
+	border-bottom: 1px solid #ccc;
 
-.center-all {
-	display: table;
-	height: 100%;
-	width: 100%;
-	padding: 4em 0;
-	max-width: 60em;
-	margin: 0 auto;
+	h1 {
+		font-size: 4em;
+		margin: 0;
+		font-weight: normal;
+		text-shadow: 0 1px 1px 0 rgba(0, 0, 0, .15);
+	}
 
-	.center-all__content {
-		display: table-cell;
-		vertical-align: middle;
+	h3 {
+		font-size: 1.2em;
+		margin: 0;
+		font-weight: 300;
+		text-shadow: 0 1px 1px 0 rgba(0, 0, 0, .15);
+	}
+
+	a {
+		margin: 2em 0 0;
 	}
 }
+
+
+
+
+// Buttons
+%btn {
+	font-family: Helvetica, Arial, serif;
+	font-size: 1.2em;
+	font-weight: 600;
+	border-radius: 3px;
+	text-decoration: none;
+	cursor: pointer;
+	padding: .8em 1.4em;
+	display: inline-block;
+	text-align: center;
+	line-height: 1.4;
+	border: 1px solid rgba(0, 0, 0, .3);
+	//border-top: 1px solid rgba(0, 0, 0, .3);
+	background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(255, 255, 255, .12)),to(rgba(0, 0, 0, .12)));
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, .1),rgba(0, 0, 0, .1));
+	background-image: -moz-linear-gradient(rgba(255, 255, 255, .1),rgba(0, 0, 0, .1));
+	background-image: -o-linear-gradient(rgba(255, 255, 255, .1),rgba(0, 0, 0, .1));
+	background-image: linear-gradient(rgba(255, 255, 255, .1),rgba(0, 0, 0, .1));
+	//border-bottom-width: 2px;
+	text-decoration: none;
+	//background-color: #eee;
+	//color: #000;
+	//text-shadow: 0 1px 0 rgba(255,255,255,.18);
+	text-shadow: 0 0 1px rgba(0,0,0,.15);
+
+	box-shadow: 0 1px 5px 1px rgba(0, 0, 0, .15);
+
+	position: relative;
+	margin: 1em 0;
+}
+
+.btn--big {
+	font-size: 1.4em;
+}
+
+.btn--uppercase {
+	text-transform: uppercase;
+}
+
+@mixin btn($name, $bgcolor, $fontcolor: #fff) {
+	.btn--#{$name},
+	a.btn--#{$name},
+	button.btn--#{$name} {
+		@extend %btn;
+		color: $fontcolor;
+		background-color: $bgcolor;
+		@content;
+
+		&:hover {
+			color: $fontcolor;
+			background-color: lighten($bgcolor, 5%);
+		}
+
+		&:active {
+			//top: 2px;
+			color: $fontcolor;
+			transform: translateY(1px);
+		}
+
+		&:visited {
+			color: $fontcolor;
+		}
+	}
+}
+
+// @include btn(red, $red);
+// @include btn(yellow, $yellow);
+@include btn(green, $green);
+@include btn(blue, $blue);
+// @include btn(purple, $purple);
+
+
+
+
+// FOOTER
+footer {
+	border-top: 1px solid #eee;
+	font-size: .8em;
+	color: #ccc;
+}
+
+
+
+
+
+// HELPERS
+.tar { text-align: right; }
+
+
+// .center-all {
+// 	display: table;
+// 	height: 100%;
+// 	width: 100%;
+// 	padding: 4em 0;
+// 	max-width: 60em;
+// 	margin: 0 auto;
+
+// 	.center-all__content {
+// 		display: table-cell;
+// 		vertical-align: middle;
+// 	}
+// }
