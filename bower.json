@@ -8,6 +8,7 @@
     "**/.*",
     "**/*.txt",
     "CNAME",
+    "*.codekit",
     "test"
   ],
   "keywords": [
