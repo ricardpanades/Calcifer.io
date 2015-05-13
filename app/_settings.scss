@@ -6,21 +6,25 @@
 // The basic settings of the grid
 //
 // [1] - If you want to enable 'box-sizing: border-box' dont change this, if not, set it to false.
-// [2] - Set how many columns you want.
-// [1] - Set the max width of your grid.
-// [1] - Set the column gutter.
+// [2] - By default flexbox is enabled, if you don't want to use it, set it to false.
+// [3] - Set how many columns you want.
+// [4] - Set the max width of your grid.
+// [5] - Set the column gutter.
 // *
 
 // [1] - Box sizing
 $border-box: true;
 
-// [2] - Number of columns
+// [2] - Flexbox
+$flexbox: true;
+
+// [3] - Number of columns
 $n-columns: 12;
 
-// [3] - Max width of the grid.
+// [4] - Max width of the grid.
 $max-width: 1300;
 
-// [4] - Column gutter.
+// [5] - Column gutter.
 $column-gutter: 10;
 
 

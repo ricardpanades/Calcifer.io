@@ -52,17 +52,14 @@
 		margin-left: -$column-gutter + px;
 		margin-right: -$column-gutter + px;
 
-		// eliminar
-		margin-bottom: 10px;
-
-		// if flexbox is true
-		// TODO: more crosbrowser compatibilities
-		display: flex;
-		flex-wrap: wrap;
-		flex-flow: row wrap;
-
-		// if flexbox is false
-		// @include clearfix;
+		@if $flexbox == true {
+			// TODO: more crosbrowser compatibilities
+			display: flex;
+			flex-wrap: wrap;
+			flex-flow: row wrap;
+		} @else {
+			@include clearfix;
+		}
 	}
 
 	// generate the columns
