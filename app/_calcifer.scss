@@ -56,18 +56,30 @@
 // -------------------------------------------------------------------//
 // *
 // Mixin for generate the grid and any custom grid that you want (can use for generate custom grids that fits your needs)
+//
+// You can use this mixin on all of your project passing them the settings you want.
+//
+// @include generate-grid($colname, $n-columns, $max-width);
+// $colname -> The class name for the columns
+// $n-columns -> the number of columns that will have the grid
+// $max-width -> (optional) max width of the grid
+//
+// Example:
+// .cusom-grid {
+// 	@include generate-grid(wiredcolumn, 5)
+// }
 // *
 
-@mixin generate-grid ($colname: calcol, $n-columns: $n-columns, $max-width: $max-width) {
+@mixin generate-grid ($colname: column, $n-columns: $n-columns, $max-width: $max-width) {
 	.wrapper {
 		margin: 0 auto;
-		max-width: $max-width + px;
+		max-width: $max-width + $default-units;
 		width: 100%;
 	}
 
 	.row {
-		margin-left: -$column-gutter + px;
-		margin-right: -$column-gutter + px;
+		margin-left: -$column-gutter + $default-units;
+		margin-right: -$column-gutter + $default-units;
 
 		@if $flexbox == true {
 			// TODO: add more crosbrowser compatibilities
@@ -81,11 +93,15 @@
 
 	// generate the columns
 	@for $i from 1 through $n-columns {
-		.#{$colname}-#{$i} {
-			width: (((($max-width/$n-columns)*$i)*100)/$max-width) *1%;
-			padding-right: $column-gutter + px;
-			padding-left: $column-gutter + px;
+		%column-n {
+			padding-right: $column-gutter + $default-units;
+			padding-left: $column-gutter + $default-units;
 			float: left;
+		}
+
+		.#{$colname}-#{$i} {
+			@extend %column-n;
+			width: (((($max-width/$n-columns)*$i)*100)/$max-width) *1%;
 			// display: inline-block;
 		}
 
