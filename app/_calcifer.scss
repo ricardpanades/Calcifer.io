@@ -62,6 +62,7 @@
 // @include generate-grid($colname, $n-columns, $max-width);
 // $colname -> The class name for the columns
 // $n-columns -> the number of columns that will have the grid
+// $$column-gutter -> (optional) set the gutter of the columns.
 // $max-width -> (optional) max width of the grid
 //
 // Example:
@@ -70,7 +71,9 @@
 // }
 // *
 
-@mixin generate-grid ($colname: column, $n-columns: $n-columns, $max-width: $max-width) {
+@mixin generate-grid ($colname: column, $n-columns: $n-columns, $column-gutter: $column-gutter, $max-width: $max-width) {
+	$column-gutter: $column-gutter/2;
+
 	.wrapper {
 		margin: 0 auto;
 		max-width: $max-width + $default-units;
