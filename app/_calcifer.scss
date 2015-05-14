@@ -70,7 +70,7 @@
 		margin-right: -$column-gutter + px;
 
 		@if $flexbox == true {
-			// TODO: more crosbrowser compatibilities
+			// TODO: add more crosbrowser compatibilities
 			display: flex;
 			flex-wrap: wrap;
 			flex-flow: row wrap;
@@ -83,7 +83,8 @@
 	@for $i from 1 through $n-columns {
 		.#{$colname}-#{$i} {
 			width: (((($max-width/$n-columns)*$i)*100)/$max-width) *1%;
-			padding: $column-gutter + px;
+			padding-right: $column-gutter + px;
+			padding-left: $column-gutter + px;
 			float: left;
 			// display: inline-block;
 		}
@@ -100,53 +101,30 @@
 
 
 // -------------------------------------------------------------------//
-// RESPONSIVE MIXINS
+// RESPONSIVE GRID STYLES
 // -------------------------------------------------------------------//
 // *
-// Mixins for the responsive styles.
+// Default responsive grid styles.
 // *
 
 // Tablet large
-@media (max-width: $tablet-large) {
+@include tablet-large {
 
-}
-
-@mixin tablet-large() {
-	@media (max-width: $tablet-large) {
-		@content;
-	}
 }
 
 // Tablet small
-@media (max-width: $tablet-small) {
+@include tablet-small {
 
 }
-
-@mixin tablet-small() {
-	@media (max-width: $tablet-small) {
-		@content;
-	}
-}
-
 
 // Mobile large
-@media (max-width: $mobile-large) {
-
-}
-
-@mixin mobile-large() {
-	@media (max-width: $mobile-large) {
-		@content;
+@include mobile-large {
+	[class*="calcol-"] {
+		width: 100%;
 	}
 }
 
 // Mobile small
-@media (max-width: $mobile-small) {
+@include mobile-small {
 
-}
-
-@mixin mobile-small() {
-	@media (max-width: $mobile-small) {
-		@content;
-	}
 }
