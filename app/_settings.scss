@@ -12,27 +12,31 @@
 // *
 // The basic settings of the grid
 //
-// [1] - If you want to enable 'box-sizing: border-box' dont change this, if not, set it to false.
-// [2] - By default flexbox is enabled, if you don't want to use it, set it to false.
-// [3] - Set how many columns you want.
-// [4] - Set the max width of your grid.
-// [5] - Set the column gutter.
+// [1] - Set witch units whant to use (em, rem or px)
+// [2] - If you want to enable 'box-sizing: border-box' dont change this, if not, set it to false.
+// [3] - By default flexbox is enabled, if you don't want to use it, set it to false.
+// [4] - Set how many columns you want.
+// [5] - Set the max width of your grid.
+// [6] - Set the column gutter.
 // *
 
-// [1] - Box sizing
+// [1] - Default units used
+$default-units: em;
+
+// [2] - Box sizing
 $border-box: true;
 
-// [2] - Flexbox
+// [3] - Flexbox
 $flexbox: true;
 
-// [3] - Number of columns
+// [4] - Number of columns
 $n-columns: 12;
 
-// [4] - Max width of the grid.
-$max-width: 1300;
+// [5] - Max width of the grid.
+$max-width: 80;
 
-// [5] - Column gutter.
-$column-gutter: 10;
+// [6] - Column gutter.
+$column-gutter: 1;
 
 
 
@@ -46,13 +50,13 @@ $column-gutter: 10;
 // *
 
 // Tablet large
-$tablet-large: 800;
+$tablet-large: 60;
 
 // Table small
-$tablet-small: 500;
+$tablet-small: 48;
 
 // Mobile large
-$mobile-large: 400;
+$mobile-large: 30;
 
 // Mobile small
-$mobile-small: 300;
+$mobile-small: 20;

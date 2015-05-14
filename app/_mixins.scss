@@ -38,28 +38,28 @@
 
 // Tablet large
 @mixin tablet-large() {
-	@media (max-width: $tablet-large + px) {
+	@media (max-width: $tablet-large + $default-units) {
 		@content;
 	}
 }
 
 // Tablet small
 @mixin tablet-small() {
-	@media (max-width: $tablet-small + px) {
+	@media (max-width: $tablet-small + $default-units) {
 		@content;
 	}
 }
 
 // Mobile large
 @mixin mobile-large() {
-	@media (max-width: $mobile-large + px) {
+	@media (max-width: $mobile-large + $default-units) {
 		@content;
 	}
 }
 
 // Mobile small
 @mixin mobile-small() {
-	@media (max-width: $mobile-small + px) {
+	@media (max-width: $mobile-small + $default-units) {
 		@content;
 	}
 }
