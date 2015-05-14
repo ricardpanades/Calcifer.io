@@ -74,6 +74,8 @@
 	.wrapper {
 		margin: 0 auto;
 		max-width: $max-width + $default-units;
+		padding-left: $column-gutter + $default-units;
+		padding-right: $column-gutter + $default-units;
 		width: 100%;
 	}
 
@@ -135,8 +137,10 @@
 
 // Mobile large
 @include mobile-large {
-	[class*="calcol-"] {
-		width: 100%;
+	@for $i from 1 through $n-columns {
+		.column-#{$i} {
+			width: 100%;
+		}
 	}
 }
 
