@@ -78,7 +78,7 @@ body > .row {
 // @include generate-grid($colname, $n-columns, $max-width);
 // $colname -> The class name for the columns
 // $n-columns -> the number of columns that will have the grid
-// $$column-gutter -> (optional) set the gutter of the columns.
+// $$column-gutter -> (optional) set the gutter of the columns. IS RECOMENDED to use the same value for all the grids.
 // $max-width -> (optional) max width of the grid
 //
 // Example:
@@ -95,7 +95,7 @@ body > .row {
 		max-width: $max-width + $default-units;
 		padding-left: $column-gutter + $default-units;
 		padding-right: $column-gutter + $default-units;
-		width: 100%;
+		width: 95%;
 	}
 
 	.row {
